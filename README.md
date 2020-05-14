@@ -1,8 +1,12 @@
 # SharkHotel
 ## Các bước thiết lập project:
++ Link database: https://dbdiagram.io/d/5ebb520539d18f5553ff1c83
 + Download project về và giải nén ra thư mục
 + Mở NetBeans -> Open Projects -> dẫn tới thu mục vừa giải nén ỏ trên
 + Sau khi mở được project, tiến hành thêm thư viện JDBC: trong project vừa mở, tìm tới phần Libraries (Phía dưới Source Packages) -> chuột phải -> Add JAR/Folder -> tìm tới thư mục giải nén ở trên -> trong thu mục drivers, chọn file "mssql-jdbc-8.2.2.jre8.jar"
++ Mở SQLManagement, thực thi file SQL.sql trong thư mục sqlscript. Thiết lập account "sa" với mật khẩu "123456". 
++ Trong project, mở file SQLConnection.java (nằm trong thư mục SharkHotel). tìm tới dòng 25 'connectString = "jdbc:sqlserver://localhost\\DESKTOP-EJBMRCJ:1433;databaseName=SharkHotel";' sữa lại 'DESKTOP-EJBMRCJ' thành ServerName của máy mình
+(SeverName khi lần đầu mở SQLManagement lên)
 
 ## Mô tả chức năng:
 + Dặt phòng:
