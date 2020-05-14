@@ -27,8 +27,14 @@ public class SQLConnection {
             password = "123456";
             return DriverManager.getConnection(connectString, username, password);
         } catch (SQLException ex) {
-            System.err.println("Connect Failed");
             return null;
         }
     } 
+    
+    public static void Test(){
+        if(getConnection()!= null)
+            System.out.println("Connect OK");
+        else
+            System.out.println("Connect faild");
+    }
 }
