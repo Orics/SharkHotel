@@ -1,5 +1,5 @@
 # SharkHotel
-* Các bước thiết lập project:
+#1 Các bước thiết lập project:
 + Download project về và giải nén ra thư mục
 + Mở NetBeans -> Open Projects -> dẫn tới thu mục vừa giải nén ỏ trên
 + Sau khi mở được project, tiến hành thêm thư viện JDBC: trong project vừa mở, tìm tới phần Libraries (Phía dưới Source Packages) -> chuột phải -> Add JAR/Folder -> tìm tới thư mục giải nén ở trên -> trong thu mục drivers, chọn file "mssql-jdbc-8.2.2.jre8.jar"
