@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+//import sharkhotel.Lib.SQLConnection;
 
 /**
  *
@@ -28,7 +29,7 @@ public class SharkHotel extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        //SQLConnection.Test();
     }
     
 }
