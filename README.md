@@ -15,15 +15,16 @@
 + Icons: chứa các  hình ảnh
 + DLL: 
 	- Chứa các class nhằm truy vấn CSDL:
-	- Quy tắc đặt tên: DLL_<tên file> vd: DLL_DangNhap.java
+	- Quy tắc đặt tên: DLL_<TenFile> vd: DLL_DangNhap.java
 	- Các phương thức trong DLL là các các phương thức tĩnh (static)
 + DTO: 
 	- Chứa các class có vai trò là dữ liệu để lưu giữ lại và truyền đi 
 	- Thường chỉ là các thuộc tính public . vd: NhanVien.java
 + GUI: 
 	- Thư mục chứa các giao diện người dùng
-	- gồm : css, fxml, java
-	- java: chứa phải có phương thức static Stage/AnchorPane get(): là phương thức trả về Stage nếu là một cữa sổ, AnchorPane nếu là một AnchorPane để chứa các thành phần
+	- gồm : GUI_<TenFile>.css,  GUI_<TenFile>.fxml,  GUI_<TenFile>.java
+	- Nếu không dùng fxml thì có thể chỉ tạo file .java
+	- file .java: chứa phải có phương thức static Stage/AnchorPane get(): là phương thức trả về Stage nếu là một cữa sổ, AnchorPane nếu là một AnchorPane để chứa các thành phần
 
 + Các thư mục cá nhân để test và code: 
  
