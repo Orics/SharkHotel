@@ -9,6 +9,24 @@
 + Trong project, mở file SQLConnection.java (nằm trong thư mục SharkHotel). tìm tới dòng 25 'connectString = "jdbc:sqlserver://localhost\\DESKTOP-EJBMRCJ:1433;databaseName=SharkHotel";' sữa lại 'DESKTOP-EJBMRCJ' thành ServerName của máy mình
 (SeverName khi lần đầu mở SQLManagement lên)
 
+
+## Mô tả các thành phần trong project:
++ Lib: thư mục chứa các class, hàm đã xây dựng sẳn để dùng chung
++ Icons: chứa các  hình ảnh
++ DLL: 
+	- Chứa các class nhằm truy vấn CSDL:
+	- Quy tắc đặt tên: DLL_<tên file> vd: DLL_DangNhap.java
+	- Các phương thức trong DLL là các các phương thức tĩnh (static)
++ DTO: 
+	- Chứa các class có vai trò là dữ liệu để lưu giữ lại và truyền đi 
+	- Thường chỉ là các thuộc tính public . vd: NhanVien.java
++ GUI: 
+	- Thư mục chứa các giao diện người dùng
+	- gồm : css, fxml, java
+	- java: chứa phải có phương thức static Stage/AnchorPane get(): là phương thức trả về Stage nếu là một cữa sổ, AnchorPane nếu là một AnchorPane để chứa các thành phần
+
++ Các thư mục cá nhân để test và code: 
+ 
 ## Mô tả chức năng:
 + Dặt phòng:
 	- đặt phòng trước: 
