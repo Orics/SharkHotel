@@ -1,0 +1,52 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-image: url("../Icons/login-bg.png");
+}
+
+.close-btn{
+    -fx-pref-height: 25px;
+    -fx-pref-width:  25px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../Icons/close-icon.png");
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.input{
+    -fx-pref-height: 40px;
+    -fx-pref-width: 220px;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-padding: 0px 20px 0px 40px; /*top - right-bottom-left*/
+}
+
+.login-btn{
+    -fx-pref-height: 40px;
+    -fx-pref-width: 220px;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-text-fill: white;
+    -fx-background-color:  #3684B1;
+    -fx-border-color: #3684B1;
+    -fx-border-width: 2;
+    -fx-font-weight: bold;
+}
+
+.login-btn:hover{
+    -fx-font-size: 14;
+
+}
+
+.username-icon{
+   -fx-image: url("../Icons/username-icon.png");
+}
+
+.password-icon{
+    -fx-image: url("../Icons/password-icon.png");
+}
+
+

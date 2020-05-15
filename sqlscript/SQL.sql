@@ -280,3 +280,24 @@ BEGIN
 	SELECT SCOPE_IDENTITY() AS ID;
 END;
 GO
+
+SELECT * FROM dbo.NhanVien WHERE MaNhanVien = 
+
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+SET DATEFORMAT DMY;
+INSERT INTO dbo.NhanVien ( MatKhau, ChucVu, HoTen ,GioiTinh ,NgaySinh ,SDT ,Email ,TrangThai)
+VALUES  ( N'123456' , -- MatKhau - nvarchar(50)
+          N'QuanLy' , -- ChucVu - nvarchar(50)
+          N'Nguyễn Văn A' , -- HoTen - nvarchar(50)
+          N'Nam' , -- GioiTinh - nvarchar(50)
+          '24/11/1980', -- NgaySinh - date
+          N'0987654321' , -- SDT - nvarchar(50)
+          N'nva@gmail.com' , -- Email - nvarchar(50)
+          N'offine'  -- TrangThai - nvarchar(50)
+        )
+
+
+
