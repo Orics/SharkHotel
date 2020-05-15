@@ -25,7 +25,7 @@
 	- gồm : GUI_<TenFile>.css,  GUI_<TenFile>.fxml,  GUI_<TenFile>.java
 	- Nếu không dùng fxml thì có thể chỉ tạo file .java
 	- file .java: chứa phải có phương thức static Stage/AnchorPane get(): là phương thức trả về Stage nếu là một cữa sổ, AnchorPane nếu là một AnchorPane để chứa các thành phần
-
+	- Các AnchorPane chính có kích thước w:1150 x h:700
 + Các thư mục cá nhân để test và code: 
  
 ## Mô tả chức năng:
