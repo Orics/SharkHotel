@@ -45,6 +45,7 @@ public class GUI_Home {
             stage.setScene(new Scene(root, 1366, 768));
             gui = stage;
             controller = loader.getController();
+            controller.setNhanVien(nv);
         } catch (IOException ex) {
             Logger.getLogger(GUI_Home_Controller.class.getName()).log(Level.SEVERE, null, ex);
         }

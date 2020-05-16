@@ -40,12 +40,12 @@ public class DLL_DangNhap {
                 ResultSet rs2 = ps2.executeQuery();
                 
                 if(rs2.next()){ // mật khẩu đúng
-                    if(rs2.getString("TrangThai").compareTo("online") == 0){ //tài khoản không online
+                    if(rs2.getString("TrangThai").compareTo("online") != 0){ //tài khoản không online
                         ThongBao = "Đăng nhập thành công";
                         nv = new NhanVien();
                         nv.MaNhanVien = rs2.getString("MaNhanVien");
                         nv.MatKhau = rs2.getString("MatKhau");
-                        nv.ChucVu = rs2.getString("MaNhanVien");
+                        nv.ChucVu = rs2.getString("ChucVu");
                         nv.HoTen = rs2.getString("HoTen");
                         nv.GioiTinh = rs2.getString("GioiTinh");
                         nv.NgaySinh = rs2.getDate("NgaySinh").toLocalDate();

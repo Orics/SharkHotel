@@ -1,4 +1,5 @@
 ﻿
+
 CREATE DATABASE hotel;
 GO
 USE hotel;
@@ -234,8 +235,18 @@ GO
 CREATE TABLE Phong(
 	SoPhong INT PRIMARY KEY,
 	MaLoaiPhongKS INT,
-	Tang INT,
+	TenTang INT,
 	TrangThai NVARCHAR(50) --Trống, 
+)
+GO
+
+
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+CREATE TABLE Tang(
+	TenTang INT PRIMARY KEY
 )
 GO
 
@@ -281,7 +292,6 @@ BEGIN
 END;
 GO
 
-SELECT * FROM dbo.NhanVien WHERE MaNhanVien = 
 
 
 ----------------------------------------------------------------------
@@ -300,4 +310,3 @@ VALUES  ( N'123456' , -- MatKhau - nvarchar(50)
         )
 
 
-SELECT * FROM dbo.NhanVien
