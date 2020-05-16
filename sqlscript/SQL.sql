@@ -300,4 +300,4 @@ VALUES  ( N'123456' , -- MatKhau - nvarchar(50)
         )
 
 
-
+SELECT * FROM dbo.NhanVien

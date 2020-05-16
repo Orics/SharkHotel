@@ -3,14 +3,14 @@
  */
 
 .mainFxmlClass {
-    -fx-background-image: url("../Icons/login-bg.png");
+    -fx-background-image: url("../..//Icons/login-bg.png");
 }
 
 .close-btn{
     -fx-pref-height: 25px;
     -fx-pref-width:  25px;
     -fx-background-color: transparent;
-    -fx-background-image: url("../Icons/close-icon.png");
+    -fx-background-image: url("../..//Icons/close-icon.png");
     -fx-background-size: 20px 20px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -38,15 +38,14 @@
 
 .login-btn:hover{
     -fx-font-size: 14;
-
 }
 
 .username-icon{
-   -fx-image: url("../Icons/username-icon.png");
+   -fx-image: url("../..//Icons/username-icon.png");
 }
 
 .password-icon{
-    -fx-image: url("../Icons/password-icon.png");
+    -fx-image: url("../..//Icons/password-icon.png");
 }
 
 

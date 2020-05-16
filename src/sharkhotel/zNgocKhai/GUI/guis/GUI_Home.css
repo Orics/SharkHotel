@@ -1,0 +1,95 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-pref-width: 1366px;
+    -fx-pref-height: 768px;
+    -fx-background-color: white;
+    -fx-font-family: Segoe UI;
+}
+
+.top{
+    -fx-background-color: #398BBA;
+    -fx-pref-width: 1366px;
+    -fx-pref-height: 68px;
+}
+.top .logo{
+    -fx-image: url("../..//Icons/horizontal-logo.png");
+}
+.top .close-btn{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../..//Icons/close-black-icon.png");
+    -fx-background-size: 25px;
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.left{
+    -fx-background-color: #212C31;
+    -fx-pref-width: 216px;
+    -fx-pref-height: 700px;
+    -fx-padding: 0;
+}
+.left .acc-icon{
+    -fx-background-color: white;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+    -fx-background-radius: 50px;
+}
+.left .acc-name{
+    -fx-font-size: 12;
+    -fx-text-fill: white;
+}
+
+.left .acc-role{
+    -fx-font-size: 10;
+    -fx-text-fill: white;
+}
+
+
+.left .tab-title {
+    -fx-pref-width: 216px;
+    -fx-pref-height: 50px;
+    -fx-text-fill: #E6E6E6;
+    -fx-font-family: Segoe UI;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-padding: 0px 0px 0px 60px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px;
+    -fx-background-position: 30px 15px;
+}
+.left .tab-title:hover {
+    -fx-background-color: rgb(83, 94, 99);
+    -fx-text-fill: white;
+}
+
+.left .ttc{
+    -fx-background-image: url("../..//Icons/ttc-tabtitle-icon.png");
+}
+.left .dp{
+    -fx-background-image: url("../..//Icons/dp-tabtitle-icon.png");
+    -fx-background-position: 28px 15px;
+}
+.left .qlp{
+    -fx-background-image: url("../..//Icons/qlp-tabtitle-icon.png");
+}
+.left .dv{
+    -fx-background-image: url("../..//Icons/dv-tabtitle-icon.png");
+}
+.left .nv{
+    -fx-background-image: url("../..//Icons/nv-tabtitle-icon.png");
+}
+.left .kh{
+    -fx-background-image: url("../..//Icons/kh-tabtitle-icon.png");
+}
+.left .hd{
+    -fx-background-image: url("../..//Icons/hd-tabtitle-icon.png");
+}
+.left .tk{
+    -fx-background-image: url("../..//Icons/tk-tabtitle-icon.png");
+}
+

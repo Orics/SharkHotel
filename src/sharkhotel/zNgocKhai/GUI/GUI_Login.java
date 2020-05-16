@@ -5,87 +5,46 @@
  */
 package sharkhotel.zNgocKhai.GUI;
 
+import sharkhotel.zNgocKhai.GUI.guis.GUI_Login_Controller;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import sharkhotel.zNgocKhai.DLL.DLL_DangNhap;
-import sharkhotel.zNgocKhai.DTO.NhanVien;
 
 /**
- * FXML Controller class
  *
  * @author Orics
  */
-public class GUI_Login implements Initializable {
+public class GUI_Login {
+    //<editor-fold defaultstate="collapsed" desc="properties">
+    private Stage gui;
+    private GUI_Login_Controller controller;
+//</editor-fold>
 
-    @FXML
-    private Button thoat_btn;
-    @FXML
-    private TextField tendangnhap_tf;
-    @FXML
-    private PasswordField matkhau_pf;
-    @FXML
-    private Button dangnhap_btn;
-    @FXML
-    private Label thongbao_lb;
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        initEvents();
-    }    
-    
-    public static Stage get(){
-        try {
-            Parent root = FXMLLoader.load(GUI_Login.class.getResource("../GUI/GUI_Login.fxml"));
-            Stage stage = new Stage(StageStyle.UNDECORATED);
-            stage.setScene(new Scene(root, 600, 450));
-            return stage;
-        } catch (IOException ex) {
-            Logger.getLogger(GUI_Login.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
-        }
+    //<editor-fold defaultstate="collapsed" desc="getter, setter">
+    public Stage getGUI() {
+        return gui;
     }
     
-    private void initEvents(){
-        
-        thoat_btn.setOnAction((e) -> {
-            ((Stage)(((Button)e.getSource()).getScene().getWindow())).close();
-        });
-        
-        matkhau_pf.setOnAction((e)->{
-            String manv = tendangnhap_tf.getText();
-            String matkhau = matkhau_pf.getText();
-            NhanVien nv = DLL_DangNhap.DangNhap(manv, matkhau);
-            if(nv != null){
-                
-            }
-            thongbao_lb.setText(DLL_DangNhap.ThongBao);
-        });
-        
-        dangnhap_btn.setOnAction((e)->{
-            String manv = tendangnhap_tf.getText();
-            String matkhau = matkhau_pf.getText();
-            NhanVien nv = DLL_DangNhap.DangNhap(manv, matkhau);
-            if(nv != null){
-                
-            }
-            thongbao_lb.setText(DLL_DangNhap.ThongBao);
-        });
+    public GUI_Login_Controller getController() {
+        return controller;
+    }
+//</editor-fold>
+    
+    public GUI_Login() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../GUI/guis/GUI_Login.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage(StageStyle.UNDECORATED);
+            stage.setScene(new Scene(root, 600, 450));
+            gui = stage;
+            controller = loader.getController();
+        } catch (IOException ex) {
+            Logger.getLogger(GUI_Login_Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

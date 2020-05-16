@@ -3,26 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sharkhotel;
+package sharkhotel.zNgocKhai;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import static javafx.application.Application.launch;
 import javafx.stage.Stage;
-import sharkhotel.zNgocKhai.GUI.GUI_Login;
-//import sharkhotel.Lib.SQLConnection;
+import sharkhotel.zNgocKhai.GUI.guis.GUI_Home_Controller;
+import sharkhotel.zNgocKhai.GUI.guis.GUI_Login_Controller;
+
 /**
  *
  * @author Orics
  */
-public class SharkHotel extends Application {
+public class main extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-       (new GUI_Login()).getGUI().show();
+       // GUI_Home.get().show();
     }
 
     /**
