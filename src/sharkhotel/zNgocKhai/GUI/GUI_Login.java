@@ -14,26 +14,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import sharkhotel.Lib.GUI_Stage;
 
 /**
  *
  * @author Orics
  */
-public class GUI_Login {
-    //<editor-fold defaultstate="collapsed" desc="properties">
-    private Stage gui;
-    private GUI_Login_Controller controller;
-//</editor-fold>
-
-    //<editor-fold defaultstate="collapsed" desc="getter, setter">
-    public Stage getGUI() {
-        return gui;
-    }
-    
-    public GUI_Login_Controller getController() {
-        return controller;
-    }
-//</editor-fold>
+public class GUI_Login extends GUI_Stage{
     
     public GUI_Login() {
         try {

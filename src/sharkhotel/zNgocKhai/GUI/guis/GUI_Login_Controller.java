@@ -24,6 +24,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import sharkhotel.Lib.GUI_Controller;
 import sharkhotel.zNgocKhai.DLL.DLL_DangNhap;
 import sharkhotel.zNgocKhai.DTO.NhanVien;
 import sharkhotel.zNgocKhai.GUI.GUI_Home;
@@ -33,7 +34,7 @@ import sharkhotel.zNgocKhai.GUI.GUI_Home;
  *
  * @author Orics
  */
-public class GUI_Login_Controller implements Initializable {
+public class GUI_Login_Controller extends GUI_Controller implements Initializable {
 
     @FXML
     private Button thoat_btn;

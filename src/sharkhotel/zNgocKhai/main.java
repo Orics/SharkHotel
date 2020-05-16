@@ -26,7 +26,10 @@ public class main extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        //launch(args);
+        C1 c1 = new C1();
+        C2 c2 = new C2();
+        c1.print();
+        c2.print();
     }
-    
 }

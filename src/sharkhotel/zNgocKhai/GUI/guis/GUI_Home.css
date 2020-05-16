@@ -9,6 +9,7 @@
     -fx-font-family: Segoe UI;
 }
 
+
 .top{
     -fx-background-color: #398BBA;
     -fx-pref-width: 1366px;
@@ -27,6 +28,7 @@
     -fx-background-repeat: no-repeat;
 }
 
+
 .left{
     -fx-background-color: #212C31;
     -fx-pref-width: 216px;
@@ -43,13 +45,10 @@
     -fx-font-size: 12;
     -fx-text-fill: white;
 }
-
 .left .acc-role{
     -fx-font-size: 10;
     -fx-text-fill: white;
 }
-
-
 .left .tab-title {
     -fx-pref-width: 216px;
     -fx-pref-height: 50px;
@@ -66,7 +65,6 @@
     -fx-background-color: rgb(83, 94, 99);
     -fx-text-fill: white;
 }
-
 .left .ttc{
     -fx-background-image: url("../..//Icons/ttc-tabtitle-icon.png");
 }
@@ -93,3 +91,9 @@
     -fx-background-image: url("../..//Icons/tk-tabtitle-icon.png");
 }
 
+
+.tabs{
+    -fx-pref-width: 1150px;
+    -fx-pref-height: 700px;
+    -fx-background-color: darkorange;
+}

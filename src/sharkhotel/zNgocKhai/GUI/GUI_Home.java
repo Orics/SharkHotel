@@ -21,33 +21,138 @@ import sharkhotel.zNgocKhai.GUI.guis.GUI_Home_Controller;
  * @author Orics
  */
 public class GUI_Home {
-    //<editor-fold defaultstate="collapsed" desc="properties">
-    private Stage gui;
-    private GUI_Home_Controller controller;
+    //<editor-fold defaultstate="collapsed" desc="enum">
+    public enum Tabs {
+        THONGTINCHUNG,
+        DATPHONG,
+        QUANLYPHONG,
+        DICHVU,
+        NHANVIEN,
+        KHACHHANG,
+        HOADON,
+        THONGKE
+    };
 //</editor-fold>
 
-    //<editor-fold defaultstate="collapsed" desc="gettrer, settter">
-    public Stage getGUI() {
-        return gui;
-    }
+    //<editor-fold defaultstate="collapsed" desc="properties">
+    private static Stage _gui;
+    private static GUI_Home_Controller _controller;
     
-    public GUI_Home_Controller getController() {
-        return controller;
+    private static GUI_ThongTinChung _thongtinchung;
+    private static GUI_DatPhong _datphong;
+    private static GUI_QuanLyPhong _quanlyphong;
+    private static GUI_DichVu _dichvu;
+    private static GUI_NhanVien _nhanvien;
+    private static GUI_KhachHang _khachhang;
+    private static GUI_HoaDon _hoadon;
+    private static GUI_ThongKe _thongke;
+//</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="gettrer, settter">
+    public static Stage getGUI() {
+        return _gui;
+    }
+
+    public static GUI_Home_Controller getController() {
+        return _controller;
+    }
+
+    public static GUI_ThongTinChung getThongTinChung() {
+        return _thongtinchung;
+    }
+
+    public static GUI_DatPhong getDatPhong() {
+        return _datphong;
+    }
+
+    public static GUI_QuanLyPhong getQuanLyPhong() {
+        return _quanlyphong;
+    }
+
+    public static GUI_DichVu getDichVu() {
+        return _dichvu;
+    }
+
+    public static GUI_NhanVien getNhanVien() {
+        return _nhanvien;
+    }
+
+    public static GUI_KhachHang getKhachHang() {
+        return _khachhang;
+    }
+
+    public static GUI_HoaDon getHoaDon() {
+        return _hoadon;
+    }
+
+    public static GUI_ThongKe getThongKe() {
+        return _thongke;
     }
 //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="public method">
     public GUI_Home(NhanVien nv) {
+        // khởi tạo các thành phần con
+        _thongtinchung = new GUI_ThongTinChung();
+        _datphong = new GUI_DatPhong();
+        _quanlyphong = new GUI_QuanLyPhong();
+        _dichvu = new GUI_DichVu();
+        _nhanvien = new GUI_NhanVien();
+        _khachhang = new GUI_KhachHang();
+        _hoadon = new GUI_HoaDon();
+        _thongke = new GUI_ThongKe();
+        
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../GUI/guis/GUI_Home.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage(StageStyle.UNDECORATED);
             stage.setScene(new Scene(root, 1366, 768));
-            gui = stage;
-            controller = loader.getController();
-            controller.setNhanVien(nv);
+            _gui = stage;
+            _controller = loader.getController();
+            _controller.setNhanVien(nv);
+            _controller.load();
         } catch (IOException ex) {
             Logger.getLogger(GUI_Home_Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public static void switchTab(GUI_Home.Tabs tab){
+        //ẩn tất cả tab
+        _thongtinchung.hide();
+        _datphong.hide();
+        _quanlyphong.hide();
+        _dichvu.hide();
+        _nhanvien.hide();
+        _khachhang.hide();
+        _hoadon.hide();
+        _thongke.hide();
+        
+        // hiện tab được chọn
+        switch(tab){
+            case THONGTINCHUNG:
+                _thongtinchung.show();
+                break;
+            case DATPHONG:
+                _datphong.show();
+                break;
+            case KHACHHANG:
+                _khachhang.show();
+                break;
+            case QUANLYPHONG:
+                _quanlyphong.show();
+                break;
+            case NHANVIEN:
+                _nhanvien.show();
+                break;
+            case DICHVU:
+                _dichvu.show();
+                break;
+            case HOADON:
+                _hoadon.show();
+                break;
+            case THONGKE:
+                _thongke.show();
+                break;
         }
     }
 //</editor-fold>

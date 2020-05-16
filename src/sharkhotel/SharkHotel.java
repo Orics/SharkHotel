@@ -12,7 +12,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import sharkhotel.zNgocKhai.GUI.GUI_Home;
 import sharkhotel.zNgocKhai.GUI.GUI_Login;
+import sharkhotel.zNgocKhai.GUI.guis.GUI_Home_Controller;
 //import sharkhotel.Lib.SQLConnection;
 /**
  *
