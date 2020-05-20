@@ -15,19 +15,20 @@
 + File SQLscript.sql nằm trong thu mục SharkHotel/sqlscript/. Thực thi file này trên SQLSever để tạo csdl
 + CHÚ Ý: Để tránh các lỗi và dễ dàng để thực hiện các bảng trong csdl KHÔNG khóa ngoại với nhau, khóa ngoại chỉ để xem quan hệ tướng đối giữa các bảng. KHÔNG export file từ dbdiagram.io rồi thực thi trong SQLSever. 
 + Mô tả các bảng:
-		``` sql
-	-	table Room{ --//Phòng
+		
+	-	``` sql
+		table Room{ --//Phòng
 			RoomNumber int [pk] --// Số phòng
 			RoomTypeId int --// Mã loại phòng
 			Floor int --// Tầng
 			Status nvarchar(50) --// Trạng thái phòng
 		}
-
+		```
+		
 	-	table Floor{ --// Tầng
 			Floor int [pk] --// Tên tầng
 		}
-		
-		```
+
 
 ## Mô tả các thành phần trong project:
 + Lib: thư mục chứa các class, hàm đã xây dựng sẳn để dùng chung
