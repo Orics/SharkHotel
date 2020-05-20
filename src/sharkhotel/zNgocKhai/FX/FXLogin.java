@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sharkhotel.zNgocKhai.GUI.guis;
+package sharkhotel.zNgocKhai.FX;
 
 import java.io.IOException;
 import java.net.URL;
@@ -26,14 +26,14 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import sharkhotel.zNgocKhai.DLL.DLLLogin;
 import sharkhotel.zNgocKhai.DTO.DTOEmployee;
-import sharkhotel.zNgocKhai.GUI.GUI_Home;
+import sharkhotel.zNgocKhai.GUI.GUIHome;
 
 /**
  * FXML Controller class
  *
  * @author Orics
  */
-public class GUI_Login_Controller implements Initializable {
+public class FXLogin implements Initializable {
 
     @FXML
     private Button thoat_btn;
@@ -63,8 +63,7 @@ public class GUI_Login_Controller implements Initializable {
             String matkhau = matkhau_pf.getText();
             DTOEmployee nv = DLLLogin.Login(manv, matkhau);
             if(nv != null){
-                GUI_Home home = new GUI_Home(nv);
-                home.getGUI().show();
+                new GUIHome(nv).show();
                 ((Stage)(((PasswordField)e.getSource()).getScene().getWindow())).close();
             }
             thongbao_lb.setText(DLLLogin.ThongBao);
@@ -75,8 +74,7 @@ public class GUI_Login_Controller implements Initializable {
             String matkhau = matkhau_pf.getText();
             DTOEmployee nv = DLLLogin.Login(manv, matkhau);
             if(nv != null){
-                GUI_Home home = new GUI_Home(nv);
-                home.getGUI().show();
+                new GUIHome(nv).show();
                 ((Stage)(((Button)e.getSource()).getScene().getWindow())).close();
             }
             thongbao_lb.setText(DLLLogin.ThongBao);

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sharkhotel.zNgocKhai.GUI;
+package sharkhotel.zNgocKhai.GUI.Home;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -19,8 +19,7 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import sharkhotel.zNgocKhai.GUI.guis.GUI_Login_Controller;
-import sharkhotel.zNgocKhai.GUI.guis.GUI_ThongTinChung_Controller;
+import sharkhotel.zNgocKhai.FX.FXLogin;
 
 
 
@@ -28,23 +27,23 @@ import sharkhotel.zNgocKhai.GUI.guis.GUI_ThongTinChung_Controller;
  *
  * @author Orics
  */
-public class GUI_ThongTinChung{
+public class GUIOverview extends AnchorPane{
     private AnchorPane gui;
-    private GUI_ThongTinChung_Controller controller;
+    private GUIOverviewController controller;
 
     public AnchorPane getGUI() {
         return gui;
     }
     
-    public GUI_ThongTinChung() {
+    public GUIOverview() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../GUI/guis/GUI_ThongTinChung.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../GUI/guis/GUIOverview.fxml"));
             AnchorPane root = loader.load();
             gui = root;
             controller = loader.getController();
             controller.load();
         } catch (IOException ex) {
-            Logger.getLogger(GUI_Login_Controller.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FXLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }   
 }

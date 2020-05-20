@@ -5,7 +5,7 @@
  */
 package sharkhotel.zNgocKhai.GUI;
 
-import sharkhotel.zNgocKhai.GUI.guis.GUI_Login_Controller;
+import sharkhotel.zNgocKhai.FX.FXLogin;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,24 +21,24 @@ import javafx.stage.StageStyle;
  *
  * @author Orics
  */
-public class GUI_Login{
+public class GUILogin{
     private Stage gui;
-    private GUI_Login_Controller controller;
+    private FXLogin controller;
 
     public Stage getGUI() {
         return gui;
     }
     
-    public GUI_Login() {
+    public GUILogin() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../GUI/guis/GUI_Login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../FX/FXLogin.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage(StageStyle.UNDECORATED);
             stage.setScene(new Scene(root, 600, 450));
             gui = stage;
             controller = loader.getController();
         } catch (IOException ex) {
-            Logger.getLogger(GUI_Login_Controller.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FXLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

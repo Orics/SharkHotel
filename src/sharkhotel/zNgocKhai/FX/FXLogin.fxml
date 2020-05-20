@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@GUI_Login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkhotel.zNgocKhai.GUI.guis.GUI_Login_Controller">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@FXLogin.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkhotel.zNgocKhai.FX.FXLogin">
    <children>
       <TextField fx:id="tendangnhap_tf" layoutX="339.0" layoutY="160.0" promptText="Mã nhân viên" styleClass="input" />
       <PasswordField fx:id="matkhau_pf" layoutX="339.0" layoutY="225.0" promptText="Mật khẩu" styleClass="input" />

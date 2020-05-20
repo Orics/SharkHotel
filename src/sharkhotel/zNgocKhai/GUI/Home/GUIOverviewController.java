@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sharkhotel.zNgocKhai.GUI.guis;
+package sharkhotel.zNgocKhai.GUI.Home;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -54,80 +54,65 @@ import javax.swing.BorderFactory;
  *
  * @author Orics
  */
-public class GUI_ThongTinChung_Controller implements Initializable {
+public class GUIOverviewController implements Initializable {
     
-    private GUI_Phong dsphong_gui;
-    private GUI_LichPhong lichphong_gui;
-    private GUI_HoatDong hoatdong_gui;
+    private GUIRooms rooms_gui;
+    private GUI_LichPhong schedule_gui;
+    private GUI_HoatDong activities_gui;
     
     @FXML
-    private Tab phong_tab;
+    private Tab rooms_tab;
     @FXML
-    private Tab lichphong_tab;
+    private Tab schedule_tab;
     @FXML
-    private Tab hoatdong_tab;
+    private Tab activities_tab;
    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        rooms_gui = new GUIRooms();
     }    
     
     public void load(){
-        phong_tab.setContent(new GUI_Phong().getGUI());
-        lichphong_tab.setContent(new GUI_LichPhong().getGUI());
+        rooms_tab.setContent(rooms_gui);
+        schedule_tab.setContent(new GUI_LichPhong().getGUI());
     }
  
 }
 
 
 //<editor-fold defaultstate="collapsed" desc="class: GUI_Phong">
-class GUI_Phong {
-    private Parent gui;
+class GUIRooms extends VBox{
     
-    public Parent getGUI() {
-        return gui;
-    }
-    
-    public GUI_Phong(){
-        VBox root = new VBox();
-        root.setPrefSize(1130, 620);
-        root.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
+    public GUIRooms(){
+        this.setPrefSize(1130, 620);
+        this.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         
         HBox boloc_pn = new HBox();
         boloc_pn.setStyle(
             "-fx-pref-width: 1130; "+
             "-fx-pref-height: 50; "+
             "-fx-alignment: CENTER_LEFT; "+
-            "-fx-border-width: 0 0 1 0; "+
+            "-fx-border-width: 0 0 0 0; "+
             "-fx-spacing: 20; "+
             "-fx-padding: 0 30 0 30; "+
-            "-fx-border-color: #929292; "
+            "-fx-border-color: rgb(180,180,180); "
         );
-            String cbbstyle =   "-fx-pref-width: 200px; "+
-                                "-fx-background-color: transparent; "+
-                                "-fx-border-color: gray; " +
-                                "-fx-border-radius:  2px;";
             ComboBox<String> loaiphong_cbb = new ComboBox<String>();
+            loaiphong_cbb.setPrefWidth(200);
             loaiphong_cbb.setValue("Loại phòng");
-            loaiphong_cbb.setStyle(cbbstyle);
-
+            
             ComboBox<String> cophong_cbb = new ComboBox<String>();
-            cophong_cbb.setStyle(cbbstyle);
+            cophong_cbb.setPrefWidth(200);
             cophong_cbb.setValue("Cỡ phòng");
 
             ComboBox<String> trangthai_cbb = new ComboBox<String>();
             trangthai_cbb.setValue("Trạng thái");
-            trangthai_cbb.setStyle(cbbstyle);
+            trangthai_cbb.setPrefWidth(200);
 
             TextField timkiem_tf = new TextField();
             timkiem_tf.setPromptText("Nhập tên, sđt, cmnd của khách hàng");
-            timkiem_tf.setStyle(
-                "-fx-pref-width: 350px; "+
-                "-fx-background-color: transparent; "+
-                "-fx-border-color: gray; " +
-                "-fx-border-radius: 2px;"
-            );
+            timkiem_tf.setPrefWidth(350);
 
             Button loc_btn = new Button("Lọc");
             loc_btn.setStyle(
@@ -251,9 +236,8 @@ class GUI_Phong {
             vbox.getChildren().add(flowpane);
         }
         scrollpane.setContent(vbox);
-        root.getChildren().addAll(boloc_pn, scrollpane);
+        this.getChildren().addAll(boloc_pn, scrollpane);
         
-        gui = root;
     }
 }
 //</editor-fold>
@@ -345,7 +329,7 @@ class GUI_LichPhong {
                     "-fx-border-color: #CBCBCB; "+
                             "-fx-border-width: 2 2 2 0; "
             );
-            cactang_spn.getStylesheets().add(getClass().getResource("GUI_ThongTinChung.css").toExternalForm());
+            cactang_spn.getStylesheets().add(getClass().getResource("GUIOverview.css").toExternalForm());
             cactang_spn.setContent(loadFloors());
 
             Button btn = new Button("Sort by");

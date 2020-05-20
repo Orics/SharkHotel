@@ -110,7 +110,8 @@
 			ServiceName nvarchar(500)--//Tên dịch vụ
 			Category nvarchar(50)--//Loại dịch vụ
 			RoomTypeId int--//Mã loại phòng áp dụng dịch vụ này làm dịch vụ mặc định (vd: rượu vang, nước giải khát, quần áo, )
-			Price int--//Đơn giá
+			Price int--//Đơn giá bán
+			Cost int --// Chi phí , giá nhập
 		}
 		```
 	-	``` sql	

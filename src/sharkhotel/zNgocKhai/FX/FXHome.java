@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sharkhotel.zNgocKhai.GUI.guis;
+package sharkhotel.zNgocKhai.FX;
 
-import sharkhotel.zNgocKhai.GUI.guis.GUI_Login_Controller;
+import sharkhotel.zNgocKhai.FX.FXLogin;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,26 +22,26 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import sharkhotel.zNgocKhai.DTO.DTOEmployee;
-import sharkhotel.zNgocKhai.GUI.GUI_Home;
+import sharkhotel.zNgocKhai.GUI.GUIHome;
 
 /**
  * FXML Controller class
  *
  * @author Orics
  */
-public class GUI_Home_Controller implements Initializable {
+public class FXHome implements Initializable {
     
     //<editor-fold defaultstate="collapsed" desc="properties">
     private static DTOEmployee nhanvien;
     
     private AnchorPane ttc_tab_pn;
-    private AnchorPane dp_tab_pn;
-    private AnchorPane qlp_tab_pn; 
-    private AnchorPane dv_tab_pn;
-    private AnchorPane nv_tab_pn;
-    private AnchorPane kh_tab_pn;
-    private AnchorPane hd_tab_pn;
-    private AnchorPane tk_tab_pn;
+//    private AnchorPane dp_tab_pn;
+//    private AnchorPane qlp_tab_pn; 
+//    private AnchorPane dv_tab_pn;
+//    private AnchorPane nv_tab_pn;
+//    private AnchorPane kh_tab_pn;
+//    private AnchorPane hd_tab_pn;
+//    private AnchorPane tk_tab_pn;
     
 //</editor-fold>
     
@@ -103,14 +103,14 @@ public class GUI_Home_Controller implements Initializable {
         chucvu_lb.setText(nhanvien.Position);
 
         // khỏi tạo các pane chức năng
-        ttc_tab_pn = GUI_Home.getThongTinChung().getGUI();
-        dp_tab_pn = GUI_Home.getDatPhong().getGUI();
-        qlp_tab_pn = GUI_Home.getQuanLyPhong().getGUI(); 
-        dv_tab_pn = GUI_Home.getDichVu().getGUI();
-        nv_tab_pn = GUI_Home.getNhanVien().getGUI();
-        kh_tab_pn = GUI_Home.getKhachHang().getGUI();
-        hd_tab_pn = GUI_Home.getHoaDon().getGUI();
-        tk_tab_pn = GUI_Home.getThongKe().getGUI();
+        ttc_tab_pn = GUIHome.getOverview();
+//        dp_tab_pn = GUIHome.getDatPhong().getGUI();
+//        qlp_tab_pn = GUIHome.getQuanLyPhong().getGUI(); 
+//        dv_tab_pn = GUIHome.getDichVu().getGUI();
+//        nv_tab_pn = GUIHome.getNhanVien().getGUI();
+//        kh_tab_pn = GUIHome.getKhachHang().getGUI();
+//        hd_tab_pn = GUIHome.getHoaDon().getGUI();
+//        tk_tab_pn = GUIHome.getThongKe().getGUI();
         
         // thêm các pane vào 
         tabs_pn.getChildren().addAll(
@@ -139,68 +139,68 @@ public class GUI_Home_Controller implements Initializable {
         
        
         ttc_tab_lb.setOnMouseClicked((e) -> {
-            switchTab(GUI_Home.Tabs.THONGTINCHUNG);
+            switchTab(GUIHome.Tabs.THONGTINCHUNG);
         });
         dp_tab_lb.setOnMouseClicked((e) -> {
-            switchTab(GUI_Home.Tabs.DATPHONG);
+            switchTab(GUIHome.Tabs.DATPHONG);
         });
         qlp_tab_lb.setOnMouseClicked((e) -> {
-            switchTab(GUI_Home.Tabs.QUANLYPHONG);
+            switchTab(GUIHome.Tabs.QUANLYPHONG);
         });
         dv_tab_lb.setOnMouseClicked((e) -> {
-            switchTab(GUI_Home.Tabs.DICHVU);
+            switchTab(GUIHome.Tabs.DICHVU);
         });
         nv_tab_lb.setOnMouseClicked((e) -> {
-            switchTab(GUI_Home.Tabs.NHANVIEN);
+            switchTab(GUIHome.Tabs.NHANVIEN);
         });
         kh_tab_lb.setOnMouseClicked((e) -> {
-            switchTab(GUI_Home.Tabs.KHACHHANG);
+            switchTab(GUIHome.Tabs.KHACHHANG);
         });
         hd_tab_lb.setOnMouseClicked((e) -> {
-            switchTab(GUI_Home.Tabs.HOADON);
+            switchTab(GUIHome.Tabs.HOADON);
         });
         tk_tab_lb.setOnMouseClicked((e) -> {
-            switchTab(GUI_Home.Tabs.THONGKE);
+            switchTab(GUIHome.Tabs.THONGKE);
         });
     }
     
-     public void switchTab(GUI_Home.Tabs tab){
+     public void switchTab(GUIHome.Tabs tab){
         //ẩn tất cả tab
         ttc_tab_pn.setVisible(false);
-        dp_tab_pn.setVisible(false);
-        qlp_tab_pn.setVisible(false); 
-        dv_tab_pn.setVisible(false);
-        nv_tab_pn.setVisible(false);
-        kh_tab_pn.setVisible(false);
-        hd_tab_pn.setVisible(false);
-        tk_tab_pn.setVisible(false);
+//        dp_tab_pn.setVisible(false);
+//        qlp_tab_pn.setVisible(false); 
+//        dv_tab_pn.setVisible(false);
+//        nv_tab_pn.setVisible(false);
+//        kh_tab_pn.setVisible(false);
+//        hd_tab_pn.setVisible(false);
+//        tk_tab_pn.setVisible(false);
         
         // hiện tab được chọn
         switch(tab){
             case THONGTINCHUNG:
                 ttc_tab_pn.setVisible(true);
                 break;
-            case DATPHONG:
-                dp_tab_pn.setVisible(true);
-                break;
-            case KHACHHANG:
-                kh_tab_pn.setVisible(true);
-                break;
-            case QUANLYPHONG:
-                qlp_tab_pn.setVisible(true);
-                break;
-            case NHANVIEN:
-                nv_tab_pn.setVisible(true);
-                break;
-            case DICHVU:
-                dv_tab_pn.setVisible(true);
-                break;
-            case HOADON:
-                hd_tab_pn.setVisible(true);
-                break;
-            case THONGKE:
-                tk_tab_pn.setVisible(true);
-                break;
+//            case DATPHONG:
+//                dp_tab_pn.setVisible(true);
+//                break;
+//            case KHACHHANG:
+//                kh_tab_pn.setVisible(true);
+//                break;
+//            case QUANLYPHONG:
+//                qlp_tab_pn.setVisible(true);
+//                break;
+//            case NHANVIEN:
+//                nv_tab_pn.setVisible(true);
+//                break;
+//            case DICHVU:
+//                dv_tab_pn.setVisible(true);
+//                break;
+//            case HOADON:
+//                hd_tab_pn.setVisible(true);
+//                break;
+//            case THONGKE:
+//                tk_tab_pn.setVisible(true);
+//                break;
         }
     }
 //</editor-fold>

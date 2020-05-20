@@ -12,9 +12,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import sharkhotel.zNgocKhai.GUI.GUI_Home;
-import sharkhotel.zNgocKhai.GUI.GUI_Login;
-import sharkhotel.zNgocKhai.GUI.guis.GUI_Home_Controller;
+import sharkhotel.zNgocKhai.GUI.GUIHome;
+import sharkhotel.zNgocKhai.GUI.GUILogin;
+import sharkhotel.zNgocKhai.FX.FXHome;
 //import sharkhotel.Lib.SQLConnection;
 /**
  *
@@ -24,7 +24,7 @@ public class SharkHotel extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-       (new GUI_Login()).getGUI().show();
+       (new GUILogin()).getGUI().show();
     }
 
     /**

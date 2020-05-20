@@ -70,7 +70,8 @@ CREATE TABLE [Service] (
   [ServiceName] nvarchar(500),
   [Category] nvarchar(50),
   [RoomTypeId] int,
-  [Price] int
+  [Price] int,
+  [Cost] int
 )
 GO
 
