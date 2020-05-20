@@ -30,7 +30,7 @@ import sharkhotel.zNgocKhai.GUI.GUI_Home;
  * @author Orics
  */
 public class GUI_Home_Controller implements Initializable {
-  
+    
     //<editor-fold defaultstate="collapsed" desc="properties">
     private static NhanVien nhanvien;
     
@@ -114,14 +114,14 @@ public class GUI_Home_Controller implements Initializable {
         
         // thêm các pane vào 
         tabs_pn.getChildren().addAll(
-                ttc_tab_pn, 
-                dp_tab_pn,
-                qlp_tab_pn,
-                dv_tab_pn,
-                nv_tab_pn,
-                kh_tab_pn,
-                hd_tab_pn,
-                tk_tab_pn
+                ttc_tab_pn
+//                dp_tab_pn,
+//                qlp_tab_pn,
+//                dv_tab_pn,
+//                nv_tab_pn,
+//                kh_tab_pn,
+//                hd_tab_pn,
+//                tk_tab_pn
                 );
         
     }
@@ -139,29 +139,69 @@ public class GUI_Home_Controller implements Initializable {
         
        
         ttc_tab_lb.setOnMouseClicked((e) -> {
-            GUI_Home.switchTab(GUI_Home.Tabs.THONGTINCHUNG);
+            switchTab(GUI_Home.Tabs.THONGTINCHUNG);
         });
         dp_tab_lb.setOnMouseClicked((e) -> {
-            GUI_Home.switchTab(GUI_Home.Tabs.DATPHONG);
+            switchTab(GUI_Home.Tabs.DATPHONG);
         });
         qlp_tab_lb.setOnMouseClicked((e) -> {
-            GUI_Home.switchTab(GUI_Home.Tabs.QUANLYPHONG);
+            switchTab(GUI_Home.Tabs.QUANLYPHONG);
         });
         dv_tab_lb.setOnMouseClicked((e) -> {
-            GUI_Home.switchTab(GUI_Home.Tabs.DICHVU);
+            switchTab(GUI_Home.Tabs.DICHVU);
         });
         nv_tab_lb.setOnMouseClicked((e) -> {
-            GUI_Home.switchTab(GUI_Home.Tabs.NHANVIEN);
+            switchTab(GUI_Home.Tabs.NHANVIEN);
         });
         kh_tab_lb.setOnMouseClicked((e) -> {
-            GUI_Home.switchTab(GUI_Home.Tabs.KHACHHANG);
+            switchTab(GUI_Home.Tabs.KHACHHANG);
         });
         hd_tab_lb.setOnMouseClicked((e) -> {
-            GUI_Home.switchTab(GUI_Home.Tabs.HOADON);
+            switchTab(GUI_Home.Tabs.HOADON);
         });
         tk_tab_lb.setOnMouseClicked((e) -> {
-            GUI_Home.switchTab(GUI_Home.Tabs.THONGKE);
+            switchTab(GUI_Home.Tabs.THONGKE);
         });
+    }
+    
+     public void switchTab(GUI_Home.Tabs tab){
+        //ẩn tất cả tab
+        ttc_tab_pn.setVisible(false);
+        dp_tab_pn.setVisible(false);
+        qlp_tab_pn.setVisible(false); 
+        dv_tab_pn.setVisible(false);
+        nv_tab_pn.setVisible(false);
+        kh_tab_pn.setVisible(false);
+        hd_tab_pn.setVisible(false);
+        tk_tab_pn.setVisible(false);
+        
+        // hiện tab được chọn
+        switch(tab){
+            case THONGTINCHUNG:
+                ttc_tab_pn.setVisible(true);
+                break;
+            case DATPHONG:
+                dp_tab_pn.setVisible(true);
+                break;
+            case KHACHHANG:
+                kh_tab_pn.setVisible(true);
+                break;
+            case QUANLYPHONG:
+                qlp_tab_pn.setVisible(true);
+                break;
+            case NHANVIEN:
+                nv_tab_pn.setVisible(true);
+                break;
+            case DICHVU:
+                dv_tab_pn.setVisible(true);
+                break;
+            case HOADON:
+                hd_tab_pn.setVisible(true);
+                break;
+            case THONGKE:
+                tk_tab_pn.setVisible(true);
+                break;
+        }
     }
 //</editor-fold>
     

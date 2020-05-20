@@ -11,20 +11,24 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
-import sharkhotel.Lib.GUI_AnchorPane;
 
 
 /**
  *
  * @author Orics
  */
-public class GUI_QuanLyPhong extends GUI_AnchorPane{
+public class GUI_QuanLyPhong {
+    private AnchorPane gui;
 
+    public AnchorPane getGUI() {
+        return gui;
+    }
+    
     public GUI_QuanLyPhong() {
         AnchorPane pn = new AnchorPane();
         pn.setPrefWidth(1150);
         pn.setPrefHeight(700);
-        pn.setBackground(new Background(new BackgroundFill(Color.BROWN, CornerRadii.EMPTY, Insets.EMPTY)));
+        pn.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY)));
         pn.setVisible(true);
         gui = pn;
     }

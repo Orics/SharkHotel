@@ -1,13 +1,29 @@
 # SharkHotel
 
 ## Các bước thiết lập project:
-+ Link database: https://dbdiagram.io/d/5ebb520539d18f5553ff1c83
 + Download project về và giải nén ra thư mục
 + Mở NetBeans -> Open Projects -> dẫn tới thu mục vừa giải nén ỏ trên
-+ Sau khi mở được project, tiến hành thêm thư viện JDBC: trong project vừa mở, tìm tới phần Libraries (Phía dưới Source Packages) -> chuột phải -> Add JAR/Folder -> tìm tới thư mục giải nén ở trên -> trong thu mục drivers, chọn file "mssql-jdbc-8.2.2.jre8.jar"
++ Sau khi mở project, tiến hành gỡ các thư viện lỗi và thêm thư viện mới vào: 
+	Trong phần câu thư mục của project (ở góc bên trái) tìm tới phần Libraries (Phía dưới Source Packages) -> chuột phải -> Kiểm tra các gói thư viện lỗi (các dòng tô đỏ) -> chọn Remove và OK để gỡ bỏ.
+	Trong phần câu thư mục của project (ở góc bên trái) tìm tới phần Libraries (Phía dưới Source Packages) -> chuột phải -> Add JAR/Folder -> tìm tới thư mục giải nén ở trên -> trong thu mục drivers, chọn file "mssql-jdbc-8.2.2.jre8.jar" -> Ok để thêm thư viện
 + Mở SQLManagement, thực thi file SQL.sql trong thư mục sqlscript. Thiết lập account "sa" với mật khẩu "123456". 
 + Trong project, mở file SQLConnection.java (nằm trong thư mục SharkHotel). tìm tới dòng 25 'connectString = "jdbc:sqlserver://localhost\\DESKTOP-EJBMRCJ:1433;databaseName=SharkHotel";' sữa lại 'DESKTOP-EJBMRCJ' thành ServerName của máy mình
 (SeverName khi lần đầu mở SQLManagement lên)
+
+## Database:
++ Link để xem : https://dbdiagram.io/d/5e89385f4495b02c3b89435b
++ File SQLscript.sql nằm trong thu mục SharkHotel/sqlscript/. Thực thi file này trên SQLSever để tạo csdl
++ CHÚ Ý: Để tránh các lỗi và dễ dàng để thực hiện các bảng trong csdl KHÔNG khóa ngoại với nhau, khóa ngoại chỉ để xem quan hệ tướng đối giữa các bảng. KHÔNG export file từ dbdiagram.io rồi thực thi trong SQLSever. 
++ Mô tả các bảng:
+	- 	table Room{ //Phòng
+			RoomNumber int [pk] // Số phòng
+			RoomTypeId int // Mã loại phòng
+			Floor int // Tầng
+			Status nvarchar(50) // Trạng thái phòng
+		}
+	-	table Floor{
+			Floor int [pk]
+		}
 
 
 ## Mô tả các thành phần trong project:

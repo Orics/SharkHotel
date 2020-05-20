@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkhotel.zNgocKhai.GUI.guis.GUI_ThongTinChung_Controller">
+    <stylesheets>
+        <URL value="@GUI_ThongTinChung.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane styleClass="wrappane" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1.0" layoutY="9.0" stroke="#929292" strokeType="INSIDE" width="1130.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="23.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1.0" layoutY="42.0" stroke="#929292" strokeType="INSIDE" width="1130.0" AnchorPane.bottomAnchor="632.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0" />
+            <TabPane layoutY="18.0" prefHeight="671.0" prefWidth="1130.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="18.0">
+              <tabs>
+                <Tab fx:id="phong_tab" text="Phòng" />
+                <Tab fx:id="lichphong_tab" text="Lịch Phòng" />
+                  <Tab fx:id="hoatdong_tab" text="Hoạt động" />
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

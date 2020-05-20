@@ -1,0 +1,94 @@
+.mainFxmlClass{
+    -fx-background-color: #E5E9EC;
+    -fx-pref-width: 1150px;
+    -fx-pref-height: 700px;
+}
+
+.combo-box{
+    -fx-background-color: transparent;
+    -fx-border-color: lightgray;
+    -fx-border-radius:  2px;
+}
+
+.wrappane{
+    -fx-background-color: white;
+    -fx-pref-width: 1130px;
+    -fx-pref-height: 670px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0, 0, 0, 0.2), 5, 0.0, 0, 0);
+}
+
+.tab {
+    -fx-padding: 0px;
+    -fx-text-alignment: center;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 35px;
+    -fx-background-color: transparent;
+    -fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+.tab:selected {
+    -fx-effect: innershadow(two-pass-box, rgb(120,120,255, 1), 5, 0.5, 0, 3);
+    -fx-background-color: white;
+    -fx-border-width: 0 0 0 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0px;
+}
+.tab-pane *.tab-header-background 
+{
+    -fx-background-color: transparent;
+}
+.tab-pane .tab:selected .tab-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #398BBA;
+}
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-pref-width: 120px;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent; 
+    -fx-padding: 0;
+ }
+.scroll-pane {
+    -fx-background-color: transparent; 
+ }
+.scroll-bar .increment-button {
+    visibility: hidden;
+}
+.scroll-bar .decrement-button {
+    visibility: hidden;
+}
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical .thumb {
+    -fx-opacity: 0.5;
+}
+.scroll-bar:vertical .thumb:hover{
+    -fx-opacity: 1;
+}
+
+.titled-pane > *.content{
+    -fx-background-color: transparent ;
+    -fx-border-width: 0;
+}
+.titled-pane .title {
+    -fx-pref-height: 40px;
+    -fx-background-color: rgb(248, 248, 248);
+    -fx-border-color: #CBCBCB;
+    -fx-border-width: 2 0 2 2;
+    -fx-alignment: center-left;
+    -fx-font: bold 14px "Segoe UI";
+    -fx-padding: 10 0 10 10;
+}
+
+.context-menu{
+   -fx-padding: 5;
+}
+.menu-item:focused{
+   -fx-background-color: rgb(230,230,230);
+}
+.menu-item:focused .label{
+    -fx-text-fill: black;
+}

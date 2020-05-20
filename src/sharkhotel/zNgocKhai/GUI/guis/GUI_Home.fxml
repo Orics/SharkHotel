@@ -14,11 +14,6 @@
         <URL value="@GUI_Home.css" />
     </stylesheets>
    <children>
-      <AnchorPane styleClass="top">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" styleClass="logo" />
-            <Button fx:id="thoat_btn" layoutX="1312.0" layoutY="14.0" mnemonicParsing="false" styleClass="close-btn" />
-         </children></AnchorPane>
       <AnchorPane layoutY="68.0" styleClass="left">
          <children>
             <Label fx:id="anhdd_lb" layoutX="14.0" layoutY="17.0" styleClass="acc-icon" />
@@ -78,6 +73,11 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="tabs_pn" layoutX="216.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" styleClass="tabs" />
+      <AnchorPane fx:id="tabs_pn" layoutX="216.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-width: 10; -fx-border-color: black;" styleClass="tabs" />
+      <AnchorPane styleClass="top">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" styleClass="logo" />
+            <Button fx:id="thoat_btn" layoutX="1312.0" layoutY="14.0" mnemonicParsing="false" styleClass="close-btn" />
+         </children></AnchorPane>
    </children>
 </AnchorPane>

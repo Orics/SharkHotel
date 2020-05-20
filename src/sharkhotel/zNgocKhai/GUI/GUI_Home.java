@@ -116,45 +116,6 @@ public class GUI_Home {
         }
     }
     
-    public static void switchTab(GUI_Home.Tabs tab){
-        //ẩn tất cả tab
-        _thongtinchung.hide();
-        _datphong.hide();
-        _quanlyphong.hide();
-        _dichvu.hide();
-        _nhanvien.hide();
-        _khachhang.hide();
-        _hoadon.hide();
-        _thongke.hide();
-        
-        // hiện tab được chọn
-        switch(tab){
-            case THONGTINCHUNG:
-                _thongtinchung.show();
-                break;
-            case DATPHONG:
-                _datphong.show();
-                break;
-            case KHACHHANG:
-                _khachhang.show();
-                break;
-            case QUANLYPHONG:
-                _quanlyphong.show();
-                break;
-            case NHANVIEN:
-                _nhanvien.show();
-                break;
-            case DICHVU:
-                _dichvu.show();
-                break;
-            case HOADON:
-                _hoadon.show();
-                break;
-            case THONGKE:
-                _thongke.show();
-                break;
-        }
-    }
 //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="private method">

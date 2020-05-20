@@ -12,15 +12,22 @@ import java.util.logging.Logger;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import sharkhotel.Lib.GUI_Stage;
+
 
 /**
  *
  * @author Orics
  */
-public class GUI_Login extends GUI_Stage{
+public class GUI_Login{
+    private Stage gui;
+    private GUI_Login_Controller controller;
+
+    public Stage getGUI() {
+        return gui;
+    }
     
     public GUI_Login() {
         try {

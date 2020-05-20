@@ -11,7 +11,6 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
-import sharkhotel.Lib.GUI_AnchorPane;
 
 
 
@@ -19,13 +18,18 @@ import sharkhotel.Lib.GUI_AnchorPane;
  *
  * @author Orics
  */
-public class GUI_ThongKe extends GUI_AnchorPane{
+public class GUI_ThongKe {
+    private AnchorPane gui;
 
+    public AnchorPane getGUI() {
+        return gui;
+    }
+    
     public GUI_ThongKe() {
         AnchorPane pn = new AnchorPane();
         pn.setPrefWidth(1150);
         pn.setPrefHeight(700);
-        pn.setBackground(new Background(new BackgroundFill(Color.AQUAMARINE, CornerRadii.EMPTY, Insets.EMPTY)));
+        pn.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY)));
         pn.setVisible(true);
         gui = pn;
     }
