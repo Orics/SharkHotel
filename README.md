@@ -25,8 +25,9 @@
 	- Thường chỉ là các thuộc tính public.
 + GUI: 
 	- Thư mục chứa các giao diện người dùng
-	- gồm : * File GUI<FileName>.java . vd: GUILogin.java : là các class đại diện cho giao diện 
-			* Thư mục chứa các file cáo thành giao diện (nếu có) : GUI<FileName>.css, GUI<FileName>.fxml, GUI<FileName>Controller.java
+	- gồm : 
+		* File GUI<FileName>.java . vd: GUILogin.java : là các class đại diện cho giao diện 
+		* Thư mục chứa các file cáo thành giao diện (nếu có) : GUI<FileName>.css, GUI<FileName>.fxml, GUI<FileName>Controller.java
 	- Các giao diện chức năng chính có kích thước w:1150 x h:700
 
 + Các thư mục cá nhân: Để test và code có cấu trúc tương tự bên trên. Sẽ chủ yếu code trong thư mục mày
