@@ -13,7 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import sharkhotel.zNgocKhai.DTO.NhanVien;
+import sharkhotel.zNgocKhai.DTO.DTOEmployee;
 import sharkhotel.zNgocKhai.GUI.guis.GUI_Home_Controller;
 
 /**
@@ -91,7 +91,7 @@ public class GUI_Home {
 //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="public method">
-    public GUI_Home(NhanVien nv) {
+    public GUI_Home(DTOEmployee nv) {
         // khởi tạo các thành phần con
         _thongtinchung = new GUI_ThongTinChung();
         _datphong = new GUI_DatPhong();

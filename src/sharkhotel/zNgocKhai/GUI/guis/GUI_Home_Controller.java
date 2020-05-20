@@ -21,7 +21,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import sharkhotel.zNgocKhai.DTO.NhanVien;
+import sharkhotel.zNgocKhai.DTO.DTOEmployee;
 import sharkhotel.zNgocKhai.GUI.GUI_Home;
 
 /**
@@ -32,7 +32,7 @@ import sharkhotel.zNgocKhai.GUI.GUI_Home;
 public class GUI_Home_Controller implements Initializable {
     
     //<editor-fold defaultstate="collapsed" desc="properties">
-    private static NhanVien nhanvien;
+    private static DTOEmployee nhanvien;
     
     private AnchorPane ttc_tab_pn;
     private AnchorPane dp_tab_pn;
@@ -82,11 +82,11 @@ public class GUI_Home_Controller implements Initializable {
 //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="getter, setter">
-    public static NhanVien getNhanVien() {
+    public static DTOEmployee getNhanVien() {
         return nhanvien;
     }
     
-    public void setNhanVien(NhanVien nhanvien) {
+    public void setNhanVien(DTOEmployee nhanvien) {
         this.nhanvien = nhanvien;
     }
 //</editor-fold>
@@ -99,8 +99,8 @@ public class GUI_Home_Controller implements Initializable {
     
     public void load(){
         // load thông tin nhân viên lên GUI
-        tennv_lb.setText(nhanvien.HoTen);
-        chucvu_lb.setText(nhanvien.ChucVu);
+        tennv_lb.setText(nhanvien.FullName);
+        chucvu_lb.setText(nhanvien.Position);
 
         // khỏi tạo các pane chức năng
         ttc_tab_pn = GUI_Home.getThongTinChung().getGUI();

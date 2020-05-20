@@ -24,8 +24,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import sharkhotel.zNgocKhai.DLL.DLL_DangNhap;
-import sharkhotel.zNgocKhai.DTO.NhanVien;
+import sharkhotel.zNgocKhai.DLL.DLLLogin;
+import sharkhotel.zNgocKhai.DTO.DTOEmployee;
 import sharkhotel.zNgocKhai.GUI.GUI_Home;
 
 /**
@@ -61,25 +61,25 @@ public class GUI_Login_Controller implements Initializable {
         matkhau_pf.setOnAction((e)->{
             String manv = tendangnhap_tf.getText();
             String matkhau = matkhau_pf.getText();
-            NhanVien nv = DLL_DangNhap.DangNhap(manv, matkhau);
+            DTOEmployee nv = DLLLogin.Login(manv, matkhau);
             if(nv != null){
                 GUI_Home home = new GUI_Home(nv);
                 home.getGUI().show();
                 ((Stage)(((PasswordField)e.getSource()).getScene().getWindow())).close();
             }
-            thongbao_lb.setText(DLL_DangNhap.ThongBao);
+            thongbao_lb.setText(DLLLogin.ThongBao);
         });
         
         dangnhap_btn.setOnAction((e)->{
             String manv = tendangnhap_tf.getText();
             String matkhau = matkhau_pf.getText();
-            NhanVien nv = DLL_DangNhap.DangNhap(manv, matkhau);
+            DTOEmployee nv = DLLLogin.Login(manv, matkhau);
             if(nv != null){
                 GUI_Home home = new GUI_Home(nv);
                 home.getGUI().show();
                 ((Stage)(((Button)e.getSource()).getScene().getWindow())).close();
             }
-            thongbao_lb.setText(DLL_DangNhap.ThongBao);
+            thongbao_lb.setText(DLLLogin.ThongBao);
         });
     }
 }

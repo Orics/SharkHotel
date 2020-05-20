@@ -11,14 +11,13 @@ import java.time.LocalDate;
  *
  * @author Orics
  */
-public class NhanVien {
-    public String MaNhanVien;
-    public String MatKhau;
-    public String ChucVu;
-    public String HoTen;
-    public String GioiTinh;
-    public LocalDate NgaySinh;
-    public String SDT;
-    public String Email;
-    public String TrangThai;
+public class DTOEmployee {
+    public String EmployeeId;
+    public String Password;
+    public String Position;
+    public String FullName;
+    public String Gender;
+    public LocalDate BirthDay;
+    public String Phone;
+    public String Status;
 }
