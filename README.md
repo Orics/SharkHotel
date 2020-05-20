@@ -17,17 +17,17 @@
 + Icons: chứa các  hình ảnh
 + DLL: 
 	- Chứa các class nhằm truy vấn CSDL:
-	- Quy tắc đặt tên: DLL<FileName> vd: DLLLogin.java
+	- Quy tắc đặt tên: DLL< FileName > vd: DLLLogin.java
 	- Các phương thức trong DLL là các các phương thức tĩnh (static)
 + DTO: 
 	- Chứa các class có vai trò là dữ liệu để lưu giữ lại và truyền đi 
-	- Quy tắc đặt tên: DTO<FileName> vd: DTOEmployee.java
+	- Quy tắc đặt tên: DTO< FileName > vd: DTOEmployee.java
 	- Thường chỉ là các thuộc tính public.
 + GUI: 
 	- Thư mục chứa các giao diện người dùng
 	- gồm : 
-		* File GUI<FileName>.java . vd: GUILogin.java : là các class đại diện cho giao diện 
-		* Thư mục chứa các file cáo thành giao diện (nếu có) : GUI<FileName>.css, GUI<FileName>.fxml, GUI<FileName>Controller.java
+		* File GUI< FileName >.java . vd: GUILogin.java : là các class đại diện cho giao diện 
+		* Thư mục chứa các file cáo thành giao diện (nếu có) : GUI< FileName >.css, GUI< FileName >.fxml, GUI< FileName >Controller.java
 	- Các giao diện chức năng chính có kích thước w:1150 x h:700
 
 + Các thư mục cá nhân: Để test và code có cấu trúc tương tự bên trên. Sẽ chủ yếu code trong thư mục mày
