@@ -38,7 +38,7 @@ public class GUIHome extends Stage{
     //<editor-fold defaultstate="collapsed" desc="properties">
     private static FXHome _controller;
     
-    private static GUIOverview _overview;
+   // private static GUIOverview _overview;
 //    private static GUI_DatPhong _;
 //    private static GUI_QuanLyPhong _quanlyphong;
 //    private static GUI_DichVu _dichvu;
@@ -53,9 +53,9 @@ public class GUIHome extends Stage{
         return _controller;
     }
 
-    public static GUIOverview getOverview() {
-        return _overview;
-    }
+//    public static GUIOverview getOverview() {
+//        return _overview;
+//    }
 //
 //    public static GUI_DatPhong getDatPhong() {
 //        return _datphong;
@@ -89,7 +89,7 @@ public class GUIHome extends Stage{
     //<editor-fold defaultstate="collapsed" desc="public method">
     public GUIHome(DTOEmployee nv) {
         // khởi tạo các thành phần con
-        _overview = new GUIOverview();
+       // _overview = new GUIOverview();
 //        _datphong = new GUI_DatPhong();
 //        _quanlyphong = new GUI_QuanLyPhong();
 //        _dichvu = new GUI_DichVu();
@@ -99,7 +99,7 @@ public class GUIHome extends Stage{
 //        _thongke = new GUI_ThongKe();
         
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../GUI/guis/GUIHome.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../FX/FXHome.fxml"));
             Parent root = loader.load();
             this.initStyle(StageStyle.UNDECORATED);
             this.setScene(new Scene(root, 1366, 768));

@@ -9,9 +9,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="root" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkhotel.zNgocKhai.GUI.guis.GUIHomeController">
+<AnchorPane id="AnchorPane" fx:id="root" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkhotel.zNgocKhai.FX.FXHome">
     <stylesheets>
-        <URL value="@GUIHome.css" />
+        <URL value="@FXHome.css" />
     </stylesheets>
    <children>
       <AnchorPane layoutY="68.0" styleClass="left">

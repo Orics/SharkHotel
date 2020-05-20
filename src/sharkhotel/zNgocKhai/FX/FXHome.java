@@ -99,11 +99,11 @@ public class FXHome implements Initializable {
     
     public void load(){
         // load thông tin nhân viên lên GUI
-        tennv_lb.setText(nhanvien.FullName);
-        chucvu_lb.setText(nhanvien.Position);
+        //tennv_lb.setText(nhanvien.FullName);
+        //chucvu_lb.setText(nhanvien.Position);
 
         // khỏi tạo các pane chức năng
-        ttc_tab_pn = GUIHome.getOverview();
+        //ttc_tab_pn = GUIHome.getOverview();
 //        dp_tab_pn = GUIHome.getDatPhong().getGUI();
 //        qlp_tab_pn = GUIHome.getQuanLyPhong().getGUI(); 
 //        dv_tab_pn = GUIHome.getDichVu().getGUI();
@@ -113,8 +113,8 @@ public class FXHome implements Initializable {
 //        tk_tab_pn = GUIHome.getThongKe().getGUI();
         
         // thêm các pane vào 
-        tabs_pn.getChildren().addAll(
-                ttc_tab_pn
+        //tabs_pn.getChildren().addAll(
+        //        ttc_tab_pn
 //                dp_tab_pn,
 //                qlp_tab_pn,
 //                dv_tab_pn,
@@ -122,7 +122,7 @@ public class FXHome implements Initializable {
 //                kh_tab_pn,
 //                hd_tab_pn,
 //                tk_tab_pn
-                );
+ //               );
         
     }
 //</editor-fold>
