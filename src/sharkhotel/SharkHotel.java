@@ -24,7 +24,7 @@ public class SharkHotel extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-       (new GUILogin()).getGUI().show();
+       (new GUILogin()).show();
     }
 
     /**

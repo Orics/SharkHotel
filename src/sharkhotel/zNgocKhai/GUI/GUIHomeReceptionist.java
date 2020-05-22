@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sharkhotel.zNgocKhai.GUI.Home;
+package sharkhotel.zNgocKhai.GUI;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -19,7 +19,7 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import sharkhotel.zNgocKhai.FX.FXLogin;
+
 
 
 
@@ -27,23 +27,18 @@ import sharkhotel.zNgocKhai.FX.FXLogin;
  *
  * @author Orics
  */
-public class GUIOverview extends AnchorPane{
-    private AnchorPane gui;
-    private GUIOverviewController controller;
-
-    public AnchorPane getGUI() {
-        return gui;
-    }
+public class GUIHomeReceptionist extends AnchorPane{
     
-    public GUIOverview() {
+    private sharkhotel.zNgocKhai.FX.FXHomeReceptionist controller;
+
+    public GUIHomeReceptionist() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../GUI/guis/GUIOverview.fxml"));
-            AnchorPane root = loader.load();
-            gui = root;
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../FX/FXHomeReceptionist.fxml"));
+            this.getChildren().add(loader.load());
             controller = loader.getController();
             controller.load();
         } catch (IOException ex) {
-            Logger.getLogger(FXLogin.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GUIHomeReceptionist.class.getName()).log(Level.SEVERE, null, ex);
         }
     }   
 }

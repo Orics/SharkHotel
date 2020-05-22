@@ -1,50 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sharkhotel.zNgocKhai.FX;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import sharkhotel.zNgocKhai.DLL.DLLLogin;
 import sharkhotel.zNgocKhai.DTO.DTOEmployee;
 import sharkhotel.zNgocKhai.GUI.GUIHome;
 
-/**
- * FXML Controller class
- *
- * @author Orics
- */
-public class FXLogin implements Initializable {
 
+public class FXLogin implements Initializable{
+    
     @FXML
-    private Button thoat_btn;
+    private Button exitButton;
     @FXML
-    private TextField tendangnhap_tf;
+    private TextField usernameTextField;
     @FXML
-    private PasswordField matkhau_pf;
+    private PasswordField passwordPasswordField;
     @FXML
-    private Button dangnhap_btn;
+    private Button loginButton;
     @FXML
-    private Label thongbao_lb;
+    private Label notifycationLabel;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -54,30 +35,30 @@ public class FXLogin implements Initializable {
     
     private void initEvents(){
         
-        thoat_btn.setOnAction((e) -> {
+        exitButton.setOnAction((e) -> {
             ((Stage)(((Button)e.getSource()).getScene().getWindow())).close();
         });
         
-        matkhau_pf.setOnAction((e)->{
-            String manv = tendangnhap_tf.getText();
-            String matkhau = matkhau_pf.getText();
+        passwordPasswordField.setOnAction((e)->{
+            String manv = usernameTextField.getText();
+            String matkhau = passwordPasswordField.getText();
             DTOEmployee nv = DLLLogin.Login(manv, matkhau);
             if(nv != null){
                 new GUIHome(nv).show();
                 ((Stage)(((PasswordField)e.getSource()).getScene().getWindow())).close();
             }
-            thongbao_lb.setText(DLLLogin.ThongBao);
+            notifycationLabel.setText(DLLLogin.ThongBao);
         });
         
-        dangnhap_btn.setOnAction((e)->{
-            String manv = tendangnhap_tf.getText();
-            String matkhau = matkhau_pf.getText();
+        loginButton.setOnAction((e)->{
+            String manv = usernameTextField.getText();
+            String matkhau = passwordPasswordField.getText();
             DTOEmployee nv = DLLLogin.Login(manv, matkhau);
             if(nv != null){
                 new GUIHome(nv).show();
-                ((Stage)(((Button)e.getSource()).getScene().getWindow())).close();
+                ((Stage)(((PasswordField)e.getSource()).getScene().getWindow())).close();
             }
-            thongbao_lb.setText(DLLLogin.ThongBao);
+            notifycationLabel.setText(DLLLogin.ThongBao);
         });
     }
 }

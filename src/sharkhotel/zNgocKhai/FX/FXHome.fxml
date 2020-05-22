@@ -9,18 +9,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="root" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkhotel.zNgocKhai.FX.FXHome">
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkhotel.zNgocKhai.FX.FXHome">
     <stylesheets>
         <URL value="@FXHome.css" />
     </stylesheets>
    <children>
       <AnchorPane layoutY="68.0" styleClass="left">
          <children>
-            <Label fx:id="anhdd_lb" layoutX="14.0" layoutY="17.0" styleClass="acc-icon" />
-            <Label fx:id="tennv_lb" layoutX="76.0" layoutY="24.0" prefHeight="15.0" prefWidth="137.0" styleClass="acc-name" text="Ten Nhan Vien" />
-            <Label fx:id="chucvu_lb" layoutX="76.0" layoutY="47.0" prefHeight="15.0" prefWidth="137.0" styleClass="acc-role" text="Chuc vu" />
+            <Label fx:id="avatar" layoutX="14.0" layoutY="17.0" styleClass="acc-icon" />
+            <Label fx:id="fullname" layoutX="76.0" layoutY="24.0" prefHeight="15.0" prefWidth="137.0" styleClass="acc-name" text="Ten Nhan Vien" />
+            <Label fx:id="position" layoutX="76.0" layoutY="47.0" prefHeight="15.0" prefWidth="137.0" styleClass="acc-role" text="Chuc vu" />
             <Pane layoutY="85.0" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: rgb(21, 28, 31);" />
-            <Label fx:id="ttc_tab_lb" layoutY="125.0" text="Thông tin chung">
+            <Label fx:id="receptionistTabTitle" layoutY="125.0" text="Receptionist">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
@@ -29,43 +29,49 @@
                   <String fx:value="ttc" />
                </styleClass>
             </Label>
-            <Label fx:id="dp_tab_lb" layoutY="175.0" text="Đặt phòng">
+            <Label fx:id="bookingTabTitle" layoutY="175.0" text="Bookings">
                <styleClass>
                   <String fx:value="tab-title" />
                   <String fx:value="dp" />
                </styleClass>
             </Label>
-            <Label fx:id="qlp_tab_lb" layoutY="225.0" text="Quản lý phòng">
+            <Label layoutY="225.0" text="Rooms">
                <styleClass>
                   <String fx:value="tab-title" />
                   <String fx:value="qlp" />
                </styleClass>
             </Label>
-            <Label fx:id="dv_tab_lb" layoutY="275.0" text="Dịch vụ">
+            <Label layoutY="275.0" text="Services">
                <styleClass>
                   <String fx:value="tab-title" />
                   <String fx:value="dv" />
                </styleClass>
             </Label>
-            <Label fx:id="nv_tab_lb" layoutY="325.0" text="Nhân viên">
+            <Label layoutY="325.0" text="Employees">
                <styleClass>
                   <String fx:value="tab-title" />
                   <String fx:value="nv" />
                </styleClass>
             </Label>
-            <Label fx:id="kh_tab_lb" layoutY="375.0" text="Khách hàng">
+            <Label layoutY="375.0" text="Promotions">
+               <styleClass>
+                  <String fx:value="tab-title" />
+                  <String fx:value="promotion" />
+               </styleClass>
+            </Label>
+            <Label layoutY="425.0" text="Customers">
                <styleClass>
                   <String fx:value="tab-title" />
                   <String fx:value="kh" />
                </styleClass>
             </Label>
-            <Label fx:id="hd_tab_lb" layoutY="425.0" text="Hoá đơn">
+            <Label layoutY="475.0" text="Invoices">
                <styleClass>
                   <String fx:value="tab-title" />
                   <String fx:value="hd" />
                </styleClass>
             </Label>
-            <Label fx:id="tk_tab_lb" layoutY="475.0" text="Thống kê">
+            <Label layoutY="525.0" text="Statictis">
                <styleClass>
                   <String fx:value="tab-title" />
                   <String fx:value="tk" />
@@ -73,11 +79,11 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="tabs_pn" layoutX="216.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-width: 10; -fx-border-color: black;" styleClass="tabs" />
+      <AnchorPane fx:id="content" layoutX="216.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-width: 10; -fx-border-color: black;" styleClass="tabs" />
       <AnchorPane styleClass="top">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" styleClass="logo" />
-            <Button fx:id="thoat_btn" layoutX="1312.0" layoutY="14.0" mnemonicParsing="false" styleClass="close-btn" />
+            <Button fx:id="exit" layoutX="1312.0" layoutY="14.0" mnemonicParsing="false" styleClass="close-btn" />
          </children></AnchorPane>
    </children>
 </AnchorPane>

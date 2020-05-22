@@ -26,6 +26,7 @@
 .tab {
     -fx-padding: 0px;
     -fx-text-alignment: center;
+    -fx-font-weight: bold;
     -fx-pref-width: 120px;
     -fx-pref-height: 35px;
     -fx-background-color: transparent;
@@ -45,7 +46,6 @@
     -fx-background-color: transparent;
 }
 .tab-pane .tab:selected .tab-label {
-    -fx-font-weight: bold;
     -fx-text-fill: #398BBA;
 }
 .tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
@@ -80,7 +80,7 @@
     -fx-border-width: 0;
 }
 .titled-pane .title {
-    -fx-pref-height: 40px;
+    -fx-pref-height: 50px;
     -fx-background-color: rgb(248, 248, 248);
     -fx-border-color: #CBCBCB;
     -fx-border-width: 2 0 2 2;

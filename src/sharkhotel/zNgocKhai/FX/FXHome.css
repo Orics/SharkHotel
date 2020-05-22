@@ -84,6 +84,9 @@
 .left .nv{
     -fx-background-image: url("../Icons/nv-tabtitle-icon.png");
 }
+.left .promotion{
+    -fx-background-image: url("../Icons/promotion-tabtitle-icon.png");
+}
 .left .kh{
     -fx-background-image: url("../Icons/kh-tabtitle-icon.png");
 }

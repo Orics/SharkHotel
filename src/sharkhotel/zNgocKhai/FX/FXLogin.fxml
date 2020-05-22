@@ -10,12 +10,12 @@
 
 <AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@FXLogin.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkhotel.zNgocKhai.FX.FXLogin">
    <children>
-      <TextField fx:id="tendangnhap_tf" layoutX="339.0" layoutY="160.0" promptText="Mã nhân viên" styleClass="input" />
-      <PasswordField fx:id="matkhau_pf" layoutX="339.0" layoutY="225.0" promptText="Mật khẩu" styleClass="input" />
-      <Button fx:id="dangnhap_btn" alignment="CENTER" layoutX="339.0" layoutY="296.0" mnemonicParsing="false" styleClass="login-btn" text="LOGIN" />
+      <TextField fx:id="usernameTextField" layoutX="339.0" layoutY="160.0" promptText="Employee ID" styleClass="input" />
+      <PasswordField fx:id="passwordPasswordField" layoutX="339.0" layoutY="225.0" promptText="Password" styleClass="input" />
+      <Button fx:id="loginButton" alignment="CENTER" layoutX="339.0" layoutY="296.0" mnemonicParsing="false" styleClass="login-btn" text="LOGIN" />
       <ImageView fitHeight="24.0" fitWidth="23.0" layoutX="351.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" styleClass="username-icon" />
       <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="353.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" styleClass="password-icon" />
-      <Label fx:id="thongbao_lb" alignment="CENTER" layoutX="339.0" layoutY="376.0" prefHeight="23.0" prefWidth="220.0" textFill="RED" />
-      <Button fx:id="thoat_btn" layoutX="571.0" layoutY="4.0" mnemonicParsing="false" styleClass="close-btn" />
+      <Label fx:id="notifycationLabel" alignment="CENTER" layoutX="339.0" layoutY="376.0" prefHeight="23.0" prefWidth="220.0" textFill="RED" />
+      <Button fx:id="exitButton" layoutX="571.0" layoutY="4.0" mnemonicParsing="false" styleClass="close-btn" />
    </children>
 </AnchorPane>
